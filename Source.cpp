@@ -23,9 +23,9 @@ void listallprocessname(DWORD processid)
 		}
 	}
 
-	wcout << "modulebasename" << chprocessname << endl;
-	wcout << "process path" << chprocesspath << endl;
-	wcout << "process id" << processid << endl;
+	wcout << "modulebasename:" << chprocessname << endl;
+	wcout << "process path:" << chprocesspath << endl;
+	wcout << "process id:" << processid << endl;
 	CloseHandle(hprocess);
 }
 
@@ -39,9 +39,9 @@ int main()
 
 	if (benumprocess == FALSE)
 	{
-		cout << "failed" << endl;
+		wcout << "failed" << endl;
 	}
-	totalprocess = sizeof(process1) / sizeof(DWORD);
+	totalprocess = bytesreq/ sizeof(DWORD);
 	wcout << "total number of processes:" << totalprocess<<endl;
 	for (size_t i = 0; i < totalprocess; i++)
 	{
